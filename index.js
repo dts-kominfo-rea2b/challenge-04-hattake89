@@ -8,7 +8,11 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = function (dates,posisi){
+  let result = dates.map((item) => ((new Date(item)).getTime()/1000));
+  return posisi == null ? result.sort().join("-") : result[posisi];
+
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
